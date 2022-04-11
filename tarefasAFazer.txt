@@ -1,0 +1,4 @@
+1 - Arrumar a tela de Usuários, acesso está com erro; (PRINCIPAL)
+2 - Implementar melhoria na tela de cadastro dos usuários com o CRM e Especialização;
+3 - Implementar melhoria no banco de dados;
+4 - implementar novos métodos e também conteúdo que será apresentado na view dos prontuários já criados;
