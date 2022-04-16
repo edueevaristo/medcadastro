@@ -44,21 +44,18 @@
 
       <label for="inputName" class="sr-only">Name</label>
       <input type="text" name="name" id="inputName" class="form-control" placeholder="Seu nome" required autofocus>
-
-      <label for="inputCountry" class="sr-only">Country</label>
-      <input type="text" name="country" id="inputCountry" class="form-control" placeholder="Seu país" required autofocus>
       
       <label for="inputEmail" class="sr-only">Email address</label>
       <input type="email" name="email" id="inputEmail" class="form-control" placeholder="seuemail@unimar.com.br" required autofocus>
       
       <label for="inputPassword" class="sr-only">Password</label>
       <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Senha" required>
-      
-      <!--UPDATE
-      1 - Adicionar CRM;
-      2 - Adicionar Especialização;
-    
-    -->
+
+      <label for="inputCountry" class="sr-only">CRM</label>
+      <input type="text" name="crm" id="inputCRM" class="form-control" placeholder="Seu CRM" required autofocus>
+
+      <label for="inputCountry" class="sr-only">Especialização</label>
+      <input type="text" name="especializacao" id="inputEspecializacao" class="form-control" placeholder="Sua especialização" required autofocus>
 
       <p>
         <a href="<?= base_url()?>login">Você já possui uma conta? Clique aqui!</a>
