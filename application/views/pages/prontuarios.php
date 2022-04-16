@@ -12,6 +12,7 @@
 			<thead>
 				<tr>
 					<th>#</th>
+                    <th>N°Prontuário</th>
 					<th>Médico <br> responsável</th>
 					<th>Identificação do paciente</th>
 					<th>Data de criação</th>
@@ -24,6 +25,7 @@
 				<?php foreach($prontuarios as $prontuario) : ?>
                     <tr>
                         <td><?= $prontuario['id'] ?></td>
+                        <td><?= $prontuario['num_prontuario']?></td>
                         <td><?= $prontuario['name'] ?></td>
                         <td><?= $prontuario['num_paciente'] ?></td>
                         <td><?= $prontuario['release_date'] ?></td>
