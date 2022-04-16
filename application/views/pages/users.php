@@ -12,19 +12,46 @@
 					<th>Email</th>
 					<th>CRM</th> <!-- Adicionar na tela de usuários e na tela de cadastro dos usuários -->
 					<th>Especialização</th> <!-- Adicionar na tela de usuários e na tela de cadastro dos usuários -->
+					<th>Ações</th>
 				</tr>
 			</thead>
 			<tbody>
-				<?php foreach($users as $usuario) : ?>
+				<?php foreach($users as $user) : ?>
 				<tr>
-					<td><?= $usuario['id'] ?></td>
-					<td><?= $usuario['name'] ?></td>
-					<td><?= $usuario['email'] ?></td>
-<!-- 					<td><?= $usuario['country'] ?></td>
- -->				</tr>
+					<td><?= $user['id'] ?></td>
+					<td><?= $user['name'] ?></td>
+					<td><?= $user['email'] ?></td>
+ 					<td><?= $user['crm'] ?></td>
+					<td><?= $user['especializacao'] ?></td>
+
+					<td>
+						<a href="javascript:deletar(<?= $user['id'] ?>)" class="btn btn-danger btn-sm" title="Excluir Usuário">
+						<i class="fas fa-trash-alt "></i></a>
+					</td>
+				
+ 				</tr>
 				<?php endforeach;?>
 			</tbody>
 		</table>
 	</div>
 </main>
+
+<!-------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+    CRIANDO UM ALERT PARA NÃO EXCLUIR DIRETAMENTE OS USUÁRIOS SEM TER UMA VERIFICAÇÃO
+--------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------->
+<script>
+     function deletar(id) 
+     {
+         var myUrl = 'users/delete/'+id
+         if(confirm("Deseja realmente deletar este usuário?")) {
+             alert("O usuário foi deletado com sucesso!");
+             window.location.href = myUrl;
+         } else {
+             alert ("O usuário não foi deletado");
+             return false;
+         }
+     }
+ </script>
   
