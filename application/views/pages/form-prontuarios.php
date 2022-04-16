@@ -12,6 +12,16 @@
 						<form action="<?= base_url()?>prontuarios/store" method="post">
 					<?php endif; ?>
 
+
+
+					<div class="col-md-6">
+						<div class="form-group">
+							<label for="name">N° Prontuário</label>
+							<input type="text" class="form-control" name="num_prontuario" id="num_prontuario" placeholder="N° Prontuário" required value="<?= isset($prontuario) ? $prontuario["num_prontuario"] : ""?>">
+						</div>
+					</div>
+
+
 					<div class="col-md-6">
 						<div class="form-group">
 							<label for="name">Médico responsável</label>
