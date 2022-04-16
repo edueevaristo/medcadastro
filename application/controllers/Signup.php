@@ -25,10 +25,11 @@ class Signup extends CI_Controller {
 		//montando nosso cadastro do usuário com o método do CodeIgniter
 		$user = array(
 			"name" => $this->input->post("name"),
-			"country" => $this->input->post("country"),
 			"email" => $this->input->post("email"),
 			//utilizando o MD5 pra criptografar a senha do usuário
-			"password" => md5($this->input->post("password"))
+			"password" => md5($this->input->post("password")),
+			"crm" => $this->input->post("crm"),
+			"especializacao" => $this->input->post("especializacao")
 		);
 
 		/*depois de criar o usuário acima, ele vai primeiro mandar pra model e 
