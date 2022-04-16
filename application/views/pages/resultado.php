@@ -15,12 +15,13 @@
 		<table class="table table-bordered table-hover">
 			<thead>
 				<tr>
-					<th>#</th>
-					<th>Médico<br>Responsável</th>
-					<th>Identificação<br>do paciente</th>
-					<th>Data de<br>criação</th>
-					<th>Breve descrição do<br>prontuário</th>
-                    <th>Estado do<br>Prontuário</th>
+				<th>#</th>
+				<th>N° Prontuário</th>
+				<th>Médico<br>Responsável</th>
+				<th>Identificação<br>do paciente</th>
+				<th>Data de<br>criação</th>
+				<th>Breve descrição do<br>prontuário</th>
+                    		<th>Estado do<br>Prontuário</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -30,12 +31,12 @@
       <?php foreach($resultado as $prt) : ?>
         <tr>
         <td><?= $prt['id'] ?></td>
+	<td><?= $prt['num_prontuario']?></td>
         <td><?= $prt['name'] ?></td>
         <td><?= $prt['num_paciente'] ?></td>
-		<td><?= $prt['release_date'] ?></td>
-		<td><?= $prt['description'] ?></td>
+	<td><?= $prt['release_date'] ?></td>
+	<td><?= $prt['description'] ?></td>
         <td><?= $prt['estado_prt'] ?></td>
-
       </tr>
       <?php endforeach;?>
 
